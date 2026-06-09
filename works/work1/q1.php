@@ -5,4 +5,10 @@
 $num = 10;
 
 // TODO: ここにコードを追記
-echo $num;
+if ($num > 10) {
+    echo "numは10より大きいです\n";
+}
+
+if ($num < 10) {
+    echo "numは10より小さいです\n";
+}

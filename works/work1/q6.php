@@ -7,3 +7,8 @@ $num2 = 10;
 
 // TODO: ここにコードを追記
 echo $num1, $num2;
+if ($num1 ==  $num2) {
+    echo "等しいです\n";
+} else {
+    echo "等しくありません\n";
+}

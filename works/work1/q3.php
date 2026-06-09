@@ -3,4 +3,9 @@
 $num = 7;
 
 // TODO: ここにコードを追記
-echo $num;
+if ($num2 % 0) {
+    echo "偶数です\n";
+}
+if ($num2 % 1) {
+    echo "奇数です\n";
+}
