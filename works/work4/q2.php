@@ -5,19 +5,20 @@
 
 // ↓確認用コード↓(編集しないこと)
 if (introduce("田中", 20) === "田中さんは20歳です") {
-    echo("テスト1:OK\n");
+    echo ("テスト1:OK\n");
 } else {
-    echo("テスト1:NG\n");
+    echo ("テスト1:NG\n");
 }
 
 if (introduce("佐藤", 0) === "佐藤さんは0歳です") {
-    echo("テスト2:OK\n");
+    echo ("テスト2:OK\n");
 } else {
-    echo("テスト2:NG\n");
+    echo ("テスト2:NG\n");
 }
 // ↑確認用コード↑(編集しないこと)
 
 // TODO: 引数と戻り値に型を付けて完成させなさい
-function introduce($name, $age) {
+function introduce(string $name, int $age): string
+{
     return $name . "さんは" . $age . "歳です";
 }

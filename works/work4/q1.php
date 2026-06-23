@@ -5,19 +5,20 @@
 
 // ↓確認用コード↓(編集しないこと)
 if (add(2, 3) === 5) {
-    echo("テスト1:OK\n");
+    echo ("テスト1:OK\n");
 } else {
-    echo("テスト1:NG\n");
+    echo ("テスト1:NG\n");
 }
 
 if (add(-1, 1) === 0) {
-    echo("テスト2:OK\n");
+    echo ("テスト2:OK\n");
 } else {
-    echo("テスト2:NG\n");
+    echo ("テスト2:NG\n");
 }
 // ↑確認用コード↑(編集しないこと)
 
 // TODO: 引数と戻り値に型を付けて完成させなさい
-function add($a, $b) {
+function add(int $a, int $b): int
+{
     return $a + $b;
 }
