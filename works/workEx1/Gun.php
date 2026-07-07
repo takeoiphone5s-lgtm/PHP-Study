@@ -8,7 +8,12 @@ class Gun
     // 最大装弾数
     private $maxMagazine;
     // 残弾
-    private $currentMagazine;
+    private $currentMagazine = 0;
+
+    private $extendedMagazine = 0;
+
+
+    private $isExtendedMagazine = false;
     // ↑フィールド============================
 
     // コンストラクタ
@@ -57,14 +62,31 @@ class Gun
     }
 
     // 拡張マガジンを装着
-    function setExtendedMagazine()
+    function setExtendedMagazine($num)
     {
-        // 問題4
+        if (!is_int($num) || $num <= 0) {
+            echo "引数が不正です\n";
+            return;
+        }
+
+        $this->extendedMagazine = $num;
+        $this->maxMagazine += $num;
     }
 
     // 拡張マガジンを取外し
     function unsetExtendedMagazine()
     {
-        // 問題4
+        if (!$this->isExtendedMagazine) {
+            echo "拡張マガジンは装着されていません\n";
+            return;
+        }
+
+        $this->maxMagazine -= $this->extendedMagazine;
+
+        if ($this->currentMagazine > $this->maxMagazine) {
+            $this->reload();
+        }
+
+        $this->extendedMagazine = 0;
     }
 }
